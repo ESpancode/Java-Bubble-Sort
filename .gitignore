@@ -1,12 +1,45 @@
-*.class
+/*This is my bubble sort program in Java*/
+/*The program was relates to many bubble sorts created in Java*/
+/*Some References and structuring for the website below*/
+/*http://www.programmingsimplified.com/java/source-code/java-program-to-bubble-sort*/
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+import java.util.Scanner;
 
-# Package Files #
-*.jar
-*.war
-*.ear
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+public class BubbleSort {
+
+public static void main(String []args) {
+int g, a, b = 0, swap;
+Scanner in = new Scanner(System.in);
+System.out.println("Please input a number");
+g = in.nextInt();
+
+int array[] = new int[g];
+System.out.println("Please Enter " + g + " Must be Int");
+for (a = 0; a < g; a++)
+array[a] = in.nextInt();
+for (a = 1; a < ( g - 5 ); a++) {
+for (b = 1; b < g - a - 10; b++) {
+
+if (array[b] > array[b+1])
+{
+swap = array[b];
+array[b] = array[b+1];
+array[b+1] = swap;
+}
+}
+}
+System.out.println("The sorted Number list");
+for (a = 0; a < b; a++)
+System.out.println(array[a]);
+}
+}
+
+
+
+Output
+Please input a number
+1
+Please Enter 1 Must be Int
+2
+The sorted Number list
